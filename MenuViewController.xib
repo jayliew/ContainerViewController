@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="ContainerViewController" customModuleProvider="target">
+            <connections>
+                <outlet property="activeViewContainer" destination="uR9-hf-uH6" id="IaH-OD-Lcn"/>
+                <outlet property="navItem" destination="kBN-hC-3CD" id="cbw-wt-lQF"/>
+                <outlet property="tableView" destination="EsC-se-gwm" id="H18-qq-7Hx"/>
+                <outlet property="tableViewHeightConstraint" destination="dYF-kf-vgt" id="bY8-3O-Qd3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QmA-Vp-6ja">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="kBN-hC-3CD">
+                            <barButtonItem key="leftBarButtonItem" title="Menu" id="3i5-z3-QwT">
+                                <connections>
+                                    <action selector="didTapMenuButton:" destination="-1" id="vsh-hj-KaK"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uR9-hf-uH6">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.79215686269999996" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EsC-se-gwm">
+                    <rect key="frame" x="0.0" y="44" width="187.5" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="dYF-kf-vgt"/>
+                    </constraints>
+                    <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QmA-Vp-6ja" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0Ps-sP-e2Q"/>
+                <constraint firstItem="EsC-se-gwm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3PS-ui-JKH"/>
+                <constraint firstItem="EsC-se-gwm" firstAttribute="top" secondItem="QmA-Vp-6ja" secondAttribute="bottom" id="3uW-oI-QzQ"/>
+                <constraint firstAttribute="trailing" secondItem="uR9-hf-uH6" secondAttribute="trailing" id="8BE-XP-NNI"/>
+                <constraint firstItem="EsC-se-gwm" firstAttribute="width" secondItem="uR9-hf-uH6" secondAttribute="width" multiplier="0.5" id="JwT-vB-wnN"/>
+                <constraint firstItem="uR9-hf-uH6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Rtn-3d-zx9"/>
+                <constraint firstItem="QmA-Vp-6ja" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bfh-cE-3C9"/>
+                <constraint firstAttribute="trailing" secondItem="QmA-Vp-6ja" secondAttribute="trailing" id="eno-bX-i5B"/>
+                <constraint firstItem="uR9-hf-uH6" firstAttribute="top" secondItem="QmA-Vp-6ja" secondAttribute="bottom" id="fYQ-1N-iFB"/>
+                <constraint firstAttribute="bottom" secondItem="uR9-hf-uH6" secondAttribute="bottom" id="pJK-iR-Fub"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
