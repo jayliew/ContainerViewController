@@ -93,6 +93,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableViewHeightConstraint.constant = 0
 
 /*
+        // initialize these view controllers here if not done from inside AppDelegate
         let vc1 = UIViewController()
         let vc2 = UIViewController()
         let vc3 = UIViewController()
