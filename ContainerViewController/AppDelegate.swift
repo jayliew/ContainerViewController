@@ -25,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vc1.view.backgroundColor = UIColor.blue
         vc2.view.backgroundColor = UIColor.green
         vc3.view.backgroundColor = UIColor.yellow
+
+        // Or instantiate customer VCs using identifiers in storyboard like this
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let viewController = storyboard.instantiateViewControllerWithIdentifier("IdentifierThatWasSetInStoryboard") as MyViewControllerClass
         
         let menuViewController = MenuViewController(nibName: "MenuViewController", bundle: nil)
         

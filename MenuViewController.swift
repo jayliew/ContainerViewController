@@ -49,9 +49,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.init(nibName: "MenuViewController", bundle: nil)
     } // init
 
-    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: Bundle!) {
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: Bundle!){
+        print("-- init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: Bundle!)")
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
+    } // init
         
     private func removeInactiveViewController(inactiveViewController: UIViewController?) {
         if isViewLoaded {
