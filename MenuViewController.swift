@@ -49,6 +49,10 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.init(nibName: "MenuViewController", bundle: nil)
     } // init
 
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: Bundle!) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+        
     private func removeInactiveViewController(inactiveViewController: UIViewController?) {
         if isViewLoaded {
             print("-- removeInactiveViewController: view is loaded")
@@ -87,7 +91,8 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.rowHeight =  50
         // menu is hidden to start
         self.tableViewHeightConstraint.constant = 0
-        
+
+/*
         let vc1 = UIViewController()
         let vc2 = UIViewController()
         let vc3 = UIViewController()
@@ -98,7 +103,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         vc2.view.backgroundColor = UIColor.green
         vc3.view.backgroundColor = UIColor.yellow
         viewControllers = [vc1, vc2, vc3]
-        
+ */
         updateActiveViewController()
         
     } // viewDidLoad

@@ -13,9 +13,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let vc1 = UIViewController()
+        let vc2 = UIViewController()
+        let vc3 = UIViewController()
+        vc1.title = "First"
+        vc2.title = "Second"
+        vc3.title = "Third"
+        vc1.view.backgroundColor = UIColor.blue
+        vc2.view.backgroundColor = UIColor.green
+        vc3.view.backgroundColor = UIColor.yellow
+        
+        let menuViewController = MenuViewController(nibName: "MenuViewController", bundle: nil)
+        
+        // the window object is already created for us since this is a storyboard app
+        // we would have to initialize this manually in non-storyboard apps
+        window?.rootViewController = menuViewController
+        
+        menuViewController.viewControllers = [vc1, vc2, vc3]
+        
         return true
     }
 
